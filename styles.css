@@ -91,15 +91,22 @@ body {
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: 800;
-    color: var(--text-primary);
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    background: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
     transition: var(--transition-fast);
+}
+
+.logo-img {
+    height: 45px;
+    width: auto;
+    transition: var(--transition-normal);
+    filter: brightness(1.2);
+}
+
+.logo-img:hover {
+    filter: brightness(1.4) drop-shadow(0 0 10px rgba(255, 193, 7, 0.5));
+    transform: scale(1.05);
 }
 
 .nav-menu {
@@ -166,6 +173,42 @@ body {
 .hero-content {
     text-align: center;
     animation: fadeInUp 1s ease;
+}
+
+/* Profile Photo Styling */
+.profile-photo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    animation: fadeIn 1s ease;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(59, 130, 246, 0.3);
+    box-shadow:
+        0 0 0 8px rgba(59, 130, 246, 0.1),
+        0 20px 60px rgba(0, 0, 0, 0.5);
+
+    /* Dark theme blend - grayscale with blue tint */
+    filter: grayscale(30%) contrast(1.1) brightness(0.95);
+    mix-blend-mode: luminosity;
+
+    transition: all var(--transition-normal);
+    position: relative;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+    border-color: rgba(59, 130, 246, 0.6);
+    box-shadow:
+        0 0 0 8px rgba(59, 130, 246, 0.2),
+        0 25px 80px rgba(59, 130, 246, 0.3);
+    filter: grayscale(0%) contrast(1.1) brightness(1);
+    mix-blend-mode: normal;
 }
 
 .hero-tag {
@@ -673,6 +716,18 @@ section {
     margin-bottom: 40px;
 }
 
+.contact-cta {
+    margin-bottom: 30px;
+}
+
+.booking-btn {
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding: 18px 40px;
+    font-size: 16px;
+}
+
 .contact-label {
     font-size: 13px;
     text-transform: uppercase;
@@ -826,6 +881,15 @@ a.contact-value:hover {
     :root {
         --section-padding: 80px 0;
         --container-padding: 0 20px;
+    }
+
+    .logo-img {
+        height: 35px;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
     }
 
     .nav-menu {
