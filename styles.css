@@ -367,6 +367,96 @@ body {
 }
 
 /* ===================================
+   PROFILE STATS SECTION
+   =================================== */
+
+.profile-stats-section {
+    padding: 100px 0;
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.profile-stats-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.profile-image-wrapper {
+    flex-shrink: 0;
+}
+
+.profile-image-large {
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    object-fit: cover;
+
+    /* Black and white filter with dark theme integration */
+    filter: grayscale(100%) contrast(1.2) brightness(0.9);
+
+    border: 3px solid var(--border-color);
+    box-shadow:
+        0 0 0 10px rgba(59, 130, 246, 0.05),
+        0 30px 80px rgba(0, 0, 0, 0.6);
+
+    transition: all var(--transition-normal);
+    position: relative;
+}
+
+.profile-image-large:hover {
+    transform: scale(1.02);
+    border-color: rgba(59, 130, 246, 0.4);
+    box-shadow:
+        0 0 0 10px rgba(59, 130, 246, 0.1),
+        0 35px 100px rgba(59, 130, 246, 0.2);
+}
+
+.stats-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 40px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    min-width: 200px;
+    transition: var(--transition-normal);
+}
+
+.stat-card:hover {
+    background: rgba(59, 130, 246, 0.05);
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+}
+
+.stat-number-large {
+    font-size: 64px;
+    font-weight: 900;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.stat-label-large {
+    font-size: 16px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* ===================================
    SECTION COMMON STYLES
    =================================== */
 
@@ -935,6 +1025,29 @@ a.contact-value:hover {
     .hero-stats {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+
+    .profile-stats-section {
+        padding: 60px 0;
+    }
+
+    .profile-stats-content {
+        gap: 50px;
+    }
+
+    .profile-image-large {
+        width: 250px;
+        height: 250px;
+    }
+
+    .stats-container {
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .stat-card {
+        min-width: 100%;
+        padding: 30px;
     }
 
     .about-content {
