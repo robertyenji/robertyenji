@@ -1,7 +1,5 @@
 **Cybersecurity Engineer & AI Integration Specialist**
 
-From a village in Ghana without electricity to cybersecurity leadership in Philadelphia — I build secure AI solutions for enterprises with sensitive data.
-
 ## 🎯 What I Do
 
 I help organizations securely deploy AI systems while maintaining compliance with SOC 2, ISO 27001, HIPAA, and GDPR frameworks. Currently developing **Relycy**, an AI-powered auditing and compliance intelligence platform.
